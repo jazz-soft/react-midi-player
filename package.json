@@ -1,0 +1,21 @@
+{
+  "name": "react-midi-player",
+  "version": "0.0.0",
+  "description": "coming soon...",
+  "main": "react-midi-player.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jazz-soft (https://jazz-soft.net/)",
+  "dependencies": {
+    "jzz-gui-player": "^1.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jazz-soft/react-midi-player.git"
+  },
+  "homepage": "https://github.com/jazz-soft/react-midi-player#readme",
+  "bugs": "https://github.com/jazz-soft/react-midi-player/issues",
+  "license": "MIT"
+}
