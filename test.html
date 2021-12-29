@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MidiPlayer test</title>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/jzz"></script>
+<script src="https://cdn.jsdelivr.net/npm/jzz-synth-tiny"></script>
+<script src="https://cdn.jsdelivr.net/npm/jzz-midi-smf"></script>
+<script src="https://cdn.jsdelivr.net/npm/jzz-gui-player"></script>
+<script src="react-midi-player.js"></script>
+</head>
+
+<body>
+<h1>MidiPlayer test</h1>
+<div id="here">here...</div>
+
+<script>
+ReactDOM.render(React.createElement(MidiPlayer), document.getElementById('here'));
+</script>
+
+</body>
+</html>
