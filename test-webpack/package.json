@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "test-webpack",
   "version": "0.0.0",
   "scripts": {
     "test": "webpack"
@@ -7,7 +7,7 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-midi-player": "^0.0.0"
+    "react-midi-player": "^0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",

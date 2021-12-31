@@ -9,20 +9,25 @@
   }
 })(this, function() {
 
-  if (!React) {
-    React = require('react');
-    JZZ = require('jzz');
-    require('jzz-gui-player')(JZZ);
+  var R, J;
+  if (typeof React == 'undefined') {
+    R = require('react');
+    J = require('jzz');
+    require('jzz-gui-player')(J);
+  }
+  else {
+    R = React;
+    J = JZZ;
   }
 
   function MidiPlayer(props) {
-    const ref = React.useRef(null);
+    const ref = R.useRef(null);
     var player;
-    React.useEffect(() => {
-      player = JZZ.gui.Player(ref.current);
+    R.useEffect(() => {
+      player = J.gui.Player(ref.current);
       return () => { ref.current.innerHTML = ''; };
     });
-    return React.createElement('span', { ref: ref });
+    return R.createElement('span', { ref: ref });
   }
 
   return MidiPlayer;
