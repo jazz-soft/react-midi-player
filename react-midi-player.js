@@ -9,6 +9,12 @@
   }
 })(this, function() {
 
+  if (!React) {
+    React = require('react');
+    JZZ = require('jzz');
+    require('jzz-gui-player')(JZZ);
+  }
+
   function MidiPlayer(props) {
     const ref = React.useRef(null);
     var player;
