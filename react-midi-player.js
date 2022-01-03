@@ -23,10 +23,22 @@
   function MidiPlayer(props) {
     const ref = R.useRef(null);
     var player;
+    var myData;
+    function setData(data) {
+      if (myData == data) return;
+      myData = data;
+      if (!myData) return;
+      try {
+        player.load(new J.MIDI.SMF(myData));
+      }
+      catch(e) { console.log(e); }
+    }
     R.useEffect(() => {
       player = J.gui.Player(ref.current);
+      setData(props.data);
       return () => { ref.current.innerHTML = ''; };
     });
+    R.useEffect(() => { setData(props.data); }, [props.data]);
     return R.createElement('span', { ref: ref });
   }
 
