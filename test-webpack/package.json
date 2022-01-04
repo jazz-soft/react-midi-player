@@ -7,14 +7,15 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-midi-player": "^0.0.2"
+    "react-midi-player": "^0.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
-    "webpack": "^5.65.0"
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   },
   "private": true
 }

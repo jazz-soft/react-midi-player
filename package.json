@@ -1,6 +1,6 @@
 {
   "name": "react-midi-player",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "coming soon...",
   "main": "react-midi-player.js",
   "scripts": {
@@ -9,7 +9,10 @@
   "keywords": [],
   "author": "jazz-soft (https://jazz-soft.net/)",
   "dependencies": {
-    "jzz-gui-player": "^1.5.2"
+    "jzz": "^1.4.7",
+    "jzz-gui-player": "^1.5.2",
+    "jzz-midi-smf": "^1.6.4",
+    "jzz-synth-tiny": "^1.2.8"
   },
   "repository": {
     "type": "git",

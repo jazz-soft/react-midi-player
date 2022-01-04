@@ -13,12 +13,15 @@
   if (typeof React == 'undefined') {
     R = require('react');
     J = require('jzz');
+    require('jzz-midi-smf')(J);
     require('jzz-gui-player')(J);
+    require('jzz-synth-tiny')(J);
   }
   else {
     R = React;
     J = JZZ;
   }
+  if (J.synth.Tiny) J.synth.Tiny.register('Web Audio');
 
   function MidiPlayer(props) {
     const ref = R.useRef(null);
