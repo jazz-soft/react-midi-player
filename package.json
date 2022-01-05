@@ -1,12 +1,16 @@
 {
   "name": "react-midi-player",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "coming soon...",
   "main": "react-midi-player.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "midi",
+    "player"
+  ],
   "author": "jazz-soft (https://jazz-soft.net/)",
   "dependencies": {
     "jzz": "^1.4.7",

@@ -14,4 +14,5 @@ gENACpBAf0uAQEAAkD5/GYA+QACQPH8ygDxAAJA+fzKAPkAAkEB/MoBAQACQQH8ygEBAAJBAfzKAQEAZ
 kEB/GYBAQACQPn8ygD5AAJA+fzKAPkAAkEB/MoBAQACQPn8ygD5AAJA8f2RAZABDZABIf1qAPEAAQEAA\
 Q0AASEAK/y8A');
 
-ReactDOM.render(<MidiPlayer data={_data} />, document.getElementById('root'));
+ReactDOM.render(<MidiPlayer data={_data} />, document.getElementById('player1'));
+ReactDOM.render(<MidiPlayer src='test.mid' />, document.getElementById('player2'));

@@ -7,7 +7,7 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-midi-player": "^0.0.3"
+    "react-midi-player": "^0.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
