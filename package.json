@@ -1,7 +1,7 @@
 {
   "name": "react-midi-player",
-  "version": "0.0.4",
-  "description": "coming soon...",
+  "version": "0.0.5",
+  "description": "React MIDI Player component",
   "main": "react-midi-player.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

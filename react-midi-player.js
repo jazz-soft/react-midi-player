@@ -47,19 +47,8 @@
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              var r, i;
-              var data = '';
-              r = xhttp.response;
-              if (r instanceof ArrayBuffer) {
-                r = new Uint8Array(r);
-                for (i = 0; i < r.length; i++) data += String.fromCharCode(r[i]);
-              }
-              else {
-                r = xhttp.responseText;
-                for (i = 0; i < r.length; i++) data += String.fromCharCode(r.charCodeAt(i) & 0xff);
-              }
               try {
-                player.load(new J.MIDI.SMF(data));
+                player.load(new J.MIDI.SMF(xhttp.response));
               }
               catch (e) {
                 console.log('Cannot load "' + mySrc + '":', e);
