@@ -1,6 +1,6 @@
 {
   "name": "react-midi-player",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React MIDI Player component",
   "main": "react-midi-player.js",
   "scripts": {
@@ -14,7 +14,7 @@
   "author": "jazz-soft (https://jazz-soft.net/)",
   "dependencies": {
     "jzz": "^1.4.7",
-    "jzz-gui-player": "^1.5.2",
+    "jzz-gui-player": "^1.5.3",
     "jzz-midi-smf": "^1.6.4",
     "jzz-synth-tiny": "^1.2.8"
   },

@@ -41,7 +41,6 @@
       if (mySrc == src) return;
       mySrc = src;
       if (!mySrc) return;
-
       try {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -71,15 +70,20 @@
         console.log('XMLHttpRequest error', e);
       }
     }
+    function setAutoplay(autoplay) {
+      if (autoplay) player.play();
+    }
 
     R.useEffect(() => {
       player = J.gui.Player(ref.current);
       setSrc(props.src);
       setData(props.data);
+      setAutoplay(props.autoplay);
       return () => { ref.current.innerHTML = ''; };
     });
-    R.useEffect(() => { setSrc(props.src); }, [props.src]);
-    R.useEffect(() => { setData(props.data); }, [props.data]);
+    R.useEffect(() => { setSrc(props.src); setAutoplay(props.autoplay); }, [props.src]);
+    R.useEffect(() => { setData(props.data); setAutoplay(props.autoplay); }, [props.data]);
+    R.useEffect(() => { setAutoplay(props.autoplay); }, [props.autoplay]);
     return R.createElement('span', { ref: ref });
   }
 
