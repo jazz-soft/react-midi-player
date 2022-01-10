@@ -10,6 +10,21 @@
 Playing MIDI files via *Web Audio* and *Web MIDI*
 
 ## Usage
+### npm
+```
+npm install react-midi-player --save
+```
+### or include directly in HTML
+```
+// after including the React/Babel scripts
+<script src="https://cdn.jsdelivr.net/npm/jzz"></script>
+<script src="https://cdn.jsdelivr.net/npm/jzz-synth-tiny"></script>
+<script src="https://cdn.jsdelivr.net/npm/jzz-midi-smf"></script>
+<script src="https://cdn.jsdelivr.net/npm/jzz-gui-player"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-midi-player"></script>
+```
+
+## Example
 
 ```js
 import React from 'react';
@@ -33,6 +48,11 @@ ReactDOM.render(<MidiPlayer data={_data} />, document.getElementById('player'));
 ReactDOM.render(<MidiPlayer src='test.mid' />, document.getElementById('player2'));
 // be aware of the CORS-related issues when testing from a local html file
 ```
+
+## Attributes
+- `src` -- MIDI file URL
+- `data` -- MIDI file data; can be `String`, `ArrayBuffer`, or `Uint8Array`
+- `autoplay` -- if `true`, playback starts immediately
 
 ## See also:
 https://github.com/jazz-soft/JZZ-gui-Player  
