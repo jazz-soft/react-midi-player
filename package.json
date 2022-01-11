@@ -1,6 +1,6 @@
 {
   "name": "react-midi-player",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "React MIDI Player component",
   "main": "react-midi-player.js",
   "scripts": {

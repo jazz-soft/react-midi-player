@@ -52,6 +52,7 @@ ReactDOM.render(<MidiPlayer src='test.mid' />, document.getElementById('player2'
 ## Attributes
 - `src` -- MIDI file URL
 - `data` -- MIDI file data; can be `String`, `ArrayBuffer`, or `Uint8Array`
+- `loop` -- number of times to repeat, or `true` for the infinite loop
 - `autoplay` -- if `true`, playback starts immediately
 
 ## See also:

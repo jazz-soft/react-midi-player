@@ -70,6 +70,9 @@
         console.log('XMLHttpRequest error', e);
       }
     }
+    function setLoop(loop) {
+      player.loop(loop || 0);
+    }
     function setAutoplay(autoplay) {
       if (autoplay) player.play();
     }
@@ -78,11 +81,13 @@
       player = J.gui.Player(ref.current);
       setSrc(props.src);
       setData(props.data);
+      setLoop(props.loop);
       setAutoplay(props.autoplay);
       return () => { ref.current.innerHTML = ''; };
     });
     R.useEffect(() => { setSrc(props.src); setAutoplay(props.autoplay); }, [props.src]);
     R.useEffect(() => { setData(props.data); setAutoplay(props.autoplay); }, [props.data]);
+    R.useEffect(() => { setLoop(props.loop); }, [props.loop]);
     R.useEffect(() => { setAutoplay(props.autoplay); }, [props.autoplay]);
     return R.createElement('span', { ref: ref });
   }
