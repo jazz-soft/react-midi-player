@@ -9,6 +9,11 @@
 
 Playing MIDI files via *Web Audio* and *Web MIDI*
 
+You can use this module as it is,
+or you can use it as a template for your own MIDI modules.
+
+New feature/improvement requests and other feedback are welcome at https://github.com/jazz-soft/react-midi-player/discussions
+
 ## Usage
 ### npm
 ```
