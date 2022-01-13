@@ -89,6 +89,11 @@
     R.useEffect(() => { setData(props.data); setAutoplay(props.autoplay); }, [props.data]);
     R.useEffect(() => { setLoop(props.loop); }, [props.loop]);
     R.useEffect(() => { setAutoplay(props.autoplay); }, [props.autoplay]);
+    R.useEffect(() => { player.onPlay = props.onPlay; }, [props.onPlay]);
+    R.useEffect(() => { player.onStop = props.onStop; }, [props.onStop]);
+    R.useEffect(() => { player.onPause = props.onPause; }, [props.onPause]);
+    R.useEffect(() => { player.onResume = props.onResume; }, [props.onResume]);
+    R.useEffect(() => { player.onEnd = props.onEnd; }, [props.onEnd]);
     return R.createElement('span', { ref: ref });
   }
 
