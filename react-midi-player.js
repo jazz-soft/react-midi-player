@@ -22,6 +22,7 @@
     J = JZZ;
   }
   if (J.synth.Tiny) J.synth.Tiny.register('Web Audio');
+  function noop() {}
 
   function MidiPlayer(props) {
     const ref = R.useRef(null);
@@ -89,11 +90,11 @@
     R.useEffect(() => { setData(props.data); setAutoplay(props.autoplay); }, [props.data]);
     R.useEffect(() => { setLoop(props.loop); }, [props.loop]);
     R.useEffect(() => { setAutoplay(props.autoplay); }, [props.autoplay]);
-    R.useEffect(() => { player.onPlay = props.onPlay; }, [props.onPlay]);
-    R.useEffect(() => { player.onStop = props.onStop; }, [props.onStop]);
-    R.useEffect(() => { player.onPause = props.onPause; }, [props.onPause]);
-    R.useEffect(() => { player.onResume = props.onResume; }, [props.onResume]);
-    R.useEffect(() => { player.onEnd = props.onEnd; }, [props.onEnd]);
+    R.useEffect(() => { player.onPlay = props.onPlay || noop; }, [props.onPlay]);
+    R.useEffect(() => { player.onStop = props.onStop || noop; }, [props.onStop]);
+    R.useEffect(() => { player.onPause = props.onPause || noop; }, [props.onPause]);
+    R.useEffect(() => { player.onResume = props.onResume || noop; }, [props.onResume]);
+    R.useEffect(() => { player.onEnd = props.onEnd || noop; }, [props.onEnd]);
     return R.createElement('span', { ref: ref });
   }
 

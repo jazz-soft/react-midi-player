@@ -28,7 +28,16 @@ gENACpBAf0uAQEAAkD5/GYA+QACQPH8ygDxAAJA+fzKAPkAAkEB/MoBAQACQQH8ygEBAAJBAfzKAQEAZ
 kEB/GYBAQACQPn8ygD5AAJA+fzKAPkAAkEB/MoBAQACQPn8ygD5AAJA8f2RAZABDZABIf1qAPEAAQEAA\
 Q0AASEAK/y8A');
 
-ReactDOM.render(React.createElement(MidiPlayer, { data: _data, loop: 2, autoplay: true }), document.getElementById('here'));
+ReactDOM.render(React.createElement(MidiPlayer, {
+  data: _data,
+  loop: 2,
+  autoplay: true,
+  onPlay: function() { console.log('Playing!'); },
+  onStop: function() { console.log('Stopped!'); },
+  onPause: function() { console.log('Paused!'); },
+  onResume: function() { console.log('Resumed!'); },
+  onEnd: function() { console.log('Ended!'); }
+}), document.getElementById('here'));
 </script>
 
 </body>

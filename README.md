@@ -59,6 +59,11 @@ ReactDOM.render(<MidiPlayer src='test.mid' />, document.getElementById('player2'
 - `data` -- MIDI file data; can be `String`, `ArrayBuffer`, or `Uint8Array`
 - `loop` -- number of times to repeat, or `true` for the infinite loop
 - `autoplay` -- if `true`, playback starts immediately
+- `onPlay` -- function to call when the `play` button is clicked
+- `onStop` -- function to call when the `stop` button is clicked
+- `onPause` -- function to call when the `pause` button is clicked
+- `onResume` -- function to call when the playback is resumed
+- `onEnd` -- function to call when the end of the MIDI file is reached
 
 ## See also:
 https://github.com/jazz-soft/JZZ-gui-Player  
