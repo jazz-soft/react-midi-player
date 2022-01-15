@@ -62,7 +62,7 @@
         try {
           xhttp.responseType = 'arraybuffer';
         }
-        catch (e) {}
+        catch (e) {/**/}
         xhttp.overrideMimeType('text/plain; charset=x-user-defined');
         xhttp.open('GET', mySrc, true);
         xhttp.send();
