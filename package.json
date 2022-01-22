@@ -4,8 +4,9 @@
   "description": "React MIDI Player component",
   "main": "react-midi-player.js",
   "scripts": {
+    "test": "nyc instrument ./react-midi-player.js ./test/.instrumented && nyc mocha",
     "lint": "eslint react-midi-player.js",
-    "test": "mocha"
+    "coverage": "nyc report --reporter=lcov"
   },
   "keywords": [
     "react",
@@ -14,7 +15,6 @@
   ],
   "author": "jazz-soft (https://jazz-soft.net/)",
   "dependencies": {
-    "eslint": "^8.7.0",
     "jzz": "^1.4.7",
     "jzz-gui-player": "^1.5.5",
     "jzz-midi-smf": "^1.6.7",
@@ -28,7 +28,9 @@
   "bugs": "https://github.com/jazz-soft/react-midi-player/issues",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^8.7.0",
     "jsdom": "^19.0.0",
+    "nyc": "^15.1.0",
     "web-midi-test": "^1.1.9"
   }
 }
