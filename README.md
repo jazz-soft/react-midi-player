@@ -10,7 +10,7 @@
 Playing MIDI files via *Web Audio* and *Web MIDI*
 
 You can use this module as it is,
-or you can use it as a template for your own MIDI modules.
+or you can use it as a template for your own MIDI components.
 
 New feature/improvement requests and other feedback are welcome at https://github.com/jazz-soft/react-midi-player/discussions
 
@@ -51,7 +51,7 @@ Q0AASEAK/y8A');
 ReactDOM.render(<MidiPlayer data={_data} />, document.getElementById('player1'));
 // or
 ReactDOM.render(<MidiPlayer src='test.mid' />, document.getElementById('player2'));
-// be aware of the CORS-related issues when testing from a local html file
+// be aware of the CORS-related issues when testing a local html file
 ```
 
 ## Attributes
