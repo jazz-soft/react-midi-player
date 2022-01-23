@@ -2,6 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/react-midi-player.svg)](https://www.npmjs.com/package/react-midi-player)
 [![npm](https://img.shields.io/npm/dt/react-midi-player.svg)](https://www.npmjs.com/package/react-midi-player)
+[![build](https://github.com/jazz-soft/react-midi-player/actions/workflows/build.yml/badge.svg)](https://github.com/jazz-soft/react-midi-player/actions)
+[![Coverage Status](https://coveralls.io/repos/github/jazz-soft/react-midi-player/badge.svg?branch=master)](https://coveralls.io/github/jazz-soft/react-midi-player?branch=master)
 
 ## React MIDI Player Component
 
