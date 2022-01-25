@@ -1,5 +1,6 @@
 'use strict';
 (function(global, factory) {
+  /* istanbul ignore next */
   if (typeof exports === 'object' && typeof module !== 'undefined') {
     module.exports = factory();
   }
@@ -10,18 +11,22 @@
 })(this, function() {
 
   var R, J;
-  if (typeof React == 'undefined') {
+  /* istanbul ignore else */
+  if (typeof React != 'undefined') {
+    R = React;
+    J = JZZ;
+  }
+  else {
     R = require('react');
     J = require('jzz');
     require('jzz-midi-smf')(J);
     require('jzz-gui-player')(J);
     require('jzz-synth-tiny')(J);
   }
-  else {
-    R = React;
-    J = JZZ;
-  }
+  /* istanbul ignore else */
   if (J.synth.Tiny) J.synth.Tiny.register('Web Audio');
+
+  /* istanbul ignore next */
   function noop() {}
 
   function MidiPlayer(props) {
@@ -36,7 +41,7 @@
       try {
         player.load(new J.MIDI.SMF(myData));
       }
-      catch(e) { console.log(e); }
+      catch(e) { console.log('Cannot load data:', e.message); }
     }
     function setSrc(src) {
       if (mySrc == src) return;
@@ -45,13 +50,14 @@
       try {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
+          /* istanbul ignore else */
           if (this.readyState == 4) {
             if (this.status == 200) {
               try {
                 player.load(new J.MIDI.SMF(xhttp.response));
               }
               catch (e) {
-                console.log('Cannot load "' + mySrc + '":', e);
+                console.log('Cannot load "' + mySrc + '":', e.message);
               }
             }
             else {
@@ -68,6 +74,7 @@
         xhttp.send();
       }
       catch (e) {
+        /* istanbul ignore next */
         console.log('XMLHttpRequest error', e);
       }
     }
@@ -84,7 +91,7 @@
       setData(props.data);
       setLoop(props.loop);
       setAutoplay(props.autoplay);
-      return () => { ref.current.innerHTML = ''; };
+      return /* istanbul ignore next */ () => { ref.current.innerHTML = ''; };
     });
     R.useEffect(() => { setSrc(props.src); setAutoplay(props.autoplay); }, [props.src]);
     R.useEffect(() => { setData(props.data); setAutoplay(props.autoplay); }, [props.data]);

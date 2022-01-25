@@ -13,22 +13,47 @@
 
 <body>
 <h1>MidiPlayer test</h1>
-<div id="here">here...</div>
+<div id="player1">[player1]</div>
+<div id="player2">[player2]</div>
+<div id="player3">[player3]</div>
+<div id="player4">[player4]</div>
+<div id="player5">[player5]</div>
+<div id="player6">[player6]</div>
 
 <script>
-
-var _data=atob('TVRoZAAAAAYAAAABAGBNVHJrAAAABAD/LwA=');
-
 ReactDOM.render(React.createElement(MidiPlayer, {
-  data: _data,
+  data: atob('TVRoZAAAAAYAAAABAGBNVHJrAAAABAD/LwA='),
   loop: false,
   autoplay: true,
   onPlay: function() { console.log('Playing!'); },
   onStop: function() { console.log('Stopped!'); },
   onPause: function() { console.log('Paused!'); },
   onResume: function() { console.log('Resumed!'); },
-  onEnd: function() { console.log('Ended!'); }
-}), document.getElementById('here'));
+  onEnd: function() { console.log('Done!'); }
+}), document.getElementById('player1'));
+
+ReactDOM.render(React.createElement(MidiPlayer, {
+  src: 'empty.mid',
+  autoplay: true,
+  onEnd: function() { console.log('Done!'); }
+}), document.getElementById('player2'));
+
+ReactDOM.render(React.createElement(MidiPlayer, {
+  src: 'bad.mid'
+}), document.getElementById('player3'));
+
+ReactDOM.render(React.createElement(MidiPlayer, {
+  src: 'non-existent.mid'
+}), document.getElementById('player4'));
+
+ReactDOM.render(React.createElement(MidiPlayer, {
+  src: '',
+  data: ''
+}), document.getElementById('player5'));
+
+ReactDOM.render(React.createElement(MidiPlayer, {
+  data: 'garbage'
+}), document.getElementById('player6'));
 </script>
 
 </body>
