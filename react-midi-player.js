@@ -40,6 +40,7 @@
       if (!myData) return;
       try {
         player.load(new J.MIDI.SMF(myData));
+        if (props.autoplay) player.play();
       }
       catch(e) { console.log('Cannot load data:', e.message); }
     }
@@ -55,6 +56,7 @@
             if (this.status == 200) {
               try {
                 player.load(new J.MIDI.SMF(xhttp.response));
+                if (props.autoplay) player.play();
               }
               catch (e) {
                 console.log('Cannot load "' + mySrc + '":', e.message);
