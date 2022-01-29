@@ -7,7 +7,7 @@
 
 ## React MIDI Player Component
 
-![midi-player](https://jazz-soft.github.io/img/midi-player.png)
+[![midi-player](https://jazz-soft.github.io/img/midi-player.png)](https://jazz-soft.github.io/test/react-midi-player.html)
 
 Playing MIDI files via *Web Audio* and *Web MIDI*
 
