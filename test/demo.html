@@ -19,6 +19,8 @@
 <div id="player4">[player4]</div>
 <div id="player5">[player5]</div>
 <div id="player6">[player6]</div>
+<div id="player7">[player6]</div>
+<div id="player8">[player6]</div>
 
 <script>
 ReactDOM.render(React.createElement(MidiPlayer, {
@@ -33,27 +35,35 @@ ReactDOM.render(React.createElement(MidiPlayer, {
 }), document.getElementById('player1'));
 
 ReactDOM.render(React.createElement(MidiPlayer, {
-  src: 'empty.mid',
-  autoplay: true,
-  onEnd: function() { console.log('Done!'); }
+  data: atob('TVRoZAAAAAYAAAABAGBNVHJrAAAABAD/LwA=')
 }), document.getElementById('player2'));
 
 ReactDOM.render(React.createElement(MidiPlayer, {
-  src: 'bad.mid'
+  src: 'empty.mid',
+  autoplay: true,
+  onEnd: function() { console.log('Done!'); }
 }), document.getElementById('player3'));
 
 ReactDOM.render(React.createElement(MidiPlayer, {
-  src: 'non-existent.mid'
+  src: 'empty.mid'
 }), document.getElementById('player4'));
+
+ReactDOM.render(React.createElement(MidiPlayer, {
+  src: 'bad.mid'
+}), document.getElementById('player5'));
+
+ReactDOM.render(React.createElement(MidiPlayer, {
+  src: 'non-existent.mid'
+}), document.getElementById('player6'));
 
 ReactDOM.render(React.createElement(MidiPlayer, {
   src: '',
   data: ''
-}), document.getElementById('player5'));
+}), document.getElementById('player7'));
 
 ReactDOM.render(React.createElement(MidiPlayer, {
   data: 'garbage'
-}), document.getElementById('player6'));
+}), document.getElementById('player8'));
 </script>
 
 </body>
