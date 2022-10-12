@@ -93,7 +93,7 @@
       setData(props.data);
       setLoop(props.loop);
       setAutoplay(props.autoplay);
-      return /* istanbul ignore next */ () => { ref.current.innerHTML = ''; };
+      return /* istanbul ignore next */ () => { if (ref.current) ref.current.innerHTML = ''; };
     });
     R.useEffect(() => { setSrc(props.src); setAutoplay(props.autoplay); }, [props.src]);
     R.useEffect(() => { setData(props.data); setAutoplay(props.autoplay); }, [props.data]);
