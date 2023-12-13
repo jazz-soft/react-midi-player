@@ -6,6 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/jazz-soft/react-midi-player/badge.svg?branch=main)](https://coveralls.io/github/jazz-soft/react-midi-player?branch=main)
 
 ## React MIDI Player Component
+Supports MIDI 1.0 SMF and MIDI 2.0 Clips
 
 [![midi-player](https://jazz-soft.github.io/img/midi-player.png)](https://jazz-soft.github.io/test/react-midi-player.html)
 
