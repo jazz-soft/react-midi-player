@@ -16,17 +16,17 @@
   ],
   "author": "jazz-soft (https://jazz-soft.net/)",
   "dependencies": {
-    "jzz": "^1.8.4",
-    "jzz-gui-player": "^1.7.4",
-    "jzz-midi-smf": "^1.9.2",
-    "jzz-synth-tiny": "^1.4.0"
+    "jzz": "^1.9.3",
+    "jzz-gui-player": "^1.7.7",
+    "jzz-midi-smf": "^1.9.8",
+    "jzz-synth-tiny": "^1.4.3"
   },
   "devDependencies": {
-    "eslint": "^9.3.0",
-    "jsdom": "^24.1.0",
-    "mocha": "^10.4.0",
-    "nyc": "^15.1.0",
-    "web-midi-test": "^1.2.8"
+    "eslint": "^9.25.0",
+    "jsdom": "^26.1.0",
+    "mocha": "^11.1.0",
+    "nyc": "^17.1.0",
+    "web-midi-test": "^1.2.9"
   },
   "repository": {
     "type": "git",
